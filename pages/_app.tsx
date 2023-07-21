@@ -4,10 +4,10 @@ import Head from './components/navbar'
 import Footer from './components/footer'
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div>
+    </div>
       
     <Navbar />
-      <div />
+    </div>
 <Component {...pageProps} />
    </div>
         <Footer />
