@@ -2,9 +2,8 @@ import { Navbar } from "flowbite-react";
 import React from 'react';
 import Link from 'next/link';
 import { Button } from "flowbite-react";
-function head() {
+function navbar() {
   return (
-    <>
     <section className="bg-white dark:bg-gray-900">
   <Navbar
   fluid={true}
@@ -65,9 +64,8 @@ function head() {
  
 </Navbar>
       
-      </setcion>
-       <br /> 
-    </>
+      </section>
+    
 
   )
 }
