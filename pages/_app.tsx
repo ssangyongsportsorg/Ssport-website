@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
     </SessionProvider>
         <Footer />
     
-</div>>
+</div>
 
   );
 }
