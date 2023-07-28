@@ -5,12 +5,6 @@
   
   animation: fadeIn 1s;
 }
-.2 {
-background: linear-gradient ( #6F00D2, #FF5809,
-#FF8040);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-}
 
 @keyframes fadeIn {
   from {
@@ -22,6 +16,11 @@ background: linear-gradient ( #6F00D2, #FF5809,
 }
 .aabc {
 background: linear-gradient(to right, #2693c3, #a0d8ef);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.2 {
+  background: linear-gradient( #6F00D2, #FF5809, #FF8040);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
