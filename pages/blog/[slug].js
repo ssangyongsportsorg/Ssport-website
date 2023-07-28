@@ -4,6 +4,7 @@ import MarkdownIt from "markdown-it"; // import the markdown-it library
 import md from "markdown-it"; // import the markdown-it library
 import path from "path";
 import styles from '../components/Button.module.css';
+import { ReactCusdis } from '../components/cusdis/ReactCusdis.tsx'
 import Head from 'next/head'
 // The page for each post
 export default function Post({frontmatter, content}) {
@@ -48,6 +49,18 @@ export default function Post({frontmatter, content}) {
           </div>
         </address>      
     <div dangerouslySetInnerHTML={{ __html: content }} />
+        <div>
+      <ReactCusdis
+        attrs={{
+          host: 'https://cusdis-uqe1.vercel.app',
+          appId: '45c6c09a-f07c-4e05-b287-957955d9747e',
+          pageId: 'PAGE_ID',
+          pageTitle: 'PAGE_TITLE',
+          pageUrl: 'PAGE_URL'
+        }}
+      />
+
+    </div>              
       </header>
 
     </article>
