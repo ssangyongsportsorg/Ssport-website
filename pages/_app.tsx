@@ -4,7 +4,7 @@ import Head from './components/head'
 import Footer from './components/footer'
 import { SessionProvider } from "next-auth/react"
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, session, pageProps }: AppProps) {
   return (
     <div>
       
