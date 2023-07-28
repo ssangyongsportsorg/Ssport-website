@@ -9,7 +9,7 @@ function Tabl() {
         <div className="mt-4 md:mt-0">
           <h2 className={`mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white `}>
             雙龍
-                        <span className={styles.abc}>職籃</span>
+                        <span className={styles.2}>職籃</span>
           </h2>
           <p className="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">
            籃球，為一種由兩隊參與，在一個長方形籃球場進行的球類運動。每隊出場5名隊員，可將球向任何方向傳、投、拍、滾或運，目的是將籃球投入對方球籃得分，並阻止對方獲得控球權或得分。籃球是世界上最多人觀看
