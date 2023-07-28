@@ -30,7 +30,7 @@ export default function Blog({posts}){
             //extract slug and frontmatter
             const {slug, frontmatter} = post
             //extract frontmatter properties
-            const {title, seo, author, category, date, bannerImage, tags} = frontmatter
+            const {title, seo, author, category, date, bannerImage, tags, url} = frontmatter
 
             //JSX for individual blog listing
             return <article key={title}>
