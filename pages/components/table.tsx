@@ -19,7 +19,7 @@ function table() {
     <div className="mt-4 md:mt-0">
       <h2 className={`mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white `}>
         雙龍
-                    <span className={styles.abc}>職棒</span>
+                    <span className={styles.aabc}>職棒</span>
       </h2>
       <p className="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">
        棒球，（英語：Baseball、日韓稱為野球），為一種團體球類運動，由人數最少為9人的两支队伍在一個扇形的球場进行攻擊與守備。棒球球員分為攻...
