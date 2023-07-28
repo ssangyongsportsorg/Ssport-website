@@ -4,15 +4,15 @@ import Head from './components/head'
 import Footer from './components/footer'
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    </div>
+    <div>
       
     <Head />
             <SessionProvider session={session}>
 <Component {...pageProps} />
-                  <SessionProvider session={session}>
+    </SessionProvider>
         <Footer />
     
-  </div>
+</div>>
 
   );
 }
