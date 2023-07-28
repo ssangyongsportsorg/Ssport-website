@@ -55,9 +55,9 @@ lang="zh-tw"
         attrs={{
           host: 'https://cusdis-uqe1.vercel.app',
           appId: '45c6c09a-f07c-4e05-b287-957955d9747e',
-          pageId: 'PAGE_ID',
-          pageTitle: 'PAGE_TITLE',
-          pageUrl: 'PAGE_URL'
+          pageId: '{{ page.id }}',
+          pageTitle: '{{ page.title }}',
+          pageUrl: '{{ page.url }}',
         }}
       />
 
