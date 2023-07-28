@@ -4,6 +4,7 @@ seo: "在2023年3/6這天雙龍體育旗下的sba,slb域名皆被無預警的情
 author: "Peter yang"
 category: "公告"
 date: "2023-03-19"
+date: "domain"
 bannerImage: "/blog.jpg"
 tags:
     - 公告
