@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Button } from "flowbite-react";
 import { signIn, signOut, useSession } from "next-auth/react"
 
-export default function head() {
+export default function Head() {
   const { data: session, status } = useSession()
   const loading = status === "loading"
 return (
