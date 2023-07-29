@@ -2,8 +2,10 @@ import { Navbar } from "flowbite-react";
 import React from 'react';
 import Link from 'next/link';
 import { Button } from "flowbite-react";
-function head() {
-  return (
+export default function head() {
+  const { data: session, status } = useSession()
+  const loading = status === "loading"
+return (
     <>
     <header>
     
@@ -23,9 +25,33 @@ function head() {
   </Link>
   <div className="flex md:order-2">
     <Button>
-       <Link href="/tv" passHref={true}>
-      雙龍體育TV
-    </Link>
+     {!session && (
+            <Link>
+              href={`/api/auth/signin`}
+                className={styles.buttonPrimary}
+                onClick={(e) => {
+                  e.preventDefault()
+                  signIn()
+                }}
+              >
+                登入
+              </Link>
+            </>
+          )}
+          {session?.user && (
+            <>
+               <Link
+                href={`/api/auth/signout`}
+                className={styles.button}
+                onClick={(e) => {
+                  e.preventDefault()
+                  signOut()
+                }}
+              >
+                登出
+              </Link>
+            </>
+          )}
     </Button>
     <Navbar.Toggle />
   </div>
