@@ -9,7 +9,7 @@ export default function head() {
   const loading = status === "loading"
 return (
     <>
-    <header>
+    <head>
     
   <Navbar
   fluid={true}
@@ -89,7 +89,7 @@ return (
  
 </Navbar>
       
-      </header>
+      </head>
        <br /> 
     <br /> 
     </>
