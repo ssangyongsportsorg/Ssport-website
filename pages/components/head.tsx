@@ -2,6 +2,8 @@ import { Navbar } from "flowbite-react";
 import React from 'react';
 import Link from 'next/link';
 import { Button } from "flowbite-react";
+import { signIn, signOut, useSession } from "next-auth/react"
+
 export default function head() {
   const { data: session, status } = useSession()
   const loading = status === "loading"
