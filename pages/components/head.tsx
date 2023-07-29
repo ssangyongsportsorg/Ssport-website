@@ -25,7 +25,6 @@ export default function NavBar({ session }: { session: Session | null }) {
     </span>
   </Link>
   <div className="flex md:order-2">
-    {!session && (
   <>
     <Button>
        <a
@@ -40,7 +39,7 @@ export default function NavBar({ session }: { session: Session | null }) {
     </Button>
     </>
    )}
-   {session?.null && (
+   {session ? (
   <>
     <a
                 href={`/api/auth/signout`}
