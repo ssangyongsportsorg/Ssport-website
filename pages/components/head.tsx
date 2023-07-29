@@ -30,7 +30,6 @@ return (
 
 {!session && (
     <button
-        className={styles.buttonPrimary}
         onClick={(e) => {
             e.preventDefault()
             signIn()
@@ -42,7 +41,6 @@ return (
 
 {session?.user && (
     <button
-        className={styles.button}
         onClick={(e) => {
             e.preventDefault()
             signOut()
