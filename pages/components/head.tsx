@@ -5,7 +5,7 @@ import { Button } from "flowbite-react";
 import { signIn, signOut, useSession } from "next-auth/react"
 
 export default function Head() {
-  const { data: session, status } = useSession()
+  const { data: session = {} } = useSession() || {};
   const loading = status === "loading"
 return (
     <>
@@ -28,7 +28,7 @@ return (
   <div className="flex md:order-2">
     <>
 
-{!session && (
+ {!session?.user && (
     <button
         onClick={(e) => {
             e.preventDefault()
@@ -39,7 +39,7 @@ return (
     </button>
 )}
 
-{session?.user && (
+ {session?.user && (
     <button
         onClick={(e) => {
             e.preventDefault()
