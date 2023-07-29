@@ -50,7 +50,7 @@ export default function NavBar({ session }: { session: Session | null }) {
                 Sign out
               </a>
     </>
-   )}
+  
     <Navbar.Toggle />
   </div>
   <Navbar.Collapse>
