@@ -27,30 +27,27 @@ return (
   </Link>
   <div className="flex md:order-2">
     <Button>
-  {!session && (
-    <Link
-      href={`/api/auth/signin`}
-      className={styles.buttonPrimary}
-      onClick={(e) => {
-        e.preventDefault()
-        signIn()
-      }}
+{!session && (
+    <button
+        className={styles.buttonPrimary}
+        onClick={(e) => {
+            e.preventDefault()
+            signIn()
+        }}
     >
-      登入
-    </Link>
-  )}
-  {session?.user && (
-    <Link
-      href={`/api/auth/signout`}
-      className={styles.button}
-      onClick={(e) => {
-        e.preventDefault()
-        signOut()
-      }}
+        登入
+    </button>
+)}
+
+{session?.user && (
+    <button
+        className={styles.button}
+        onClick={(e) => {
+            e.preventDefault()
+            signOut()
+        }}
     >
-      登出
-    </Link>
-  )}
+        登出
 </Button>
     <Navbar.Toggle />
   </div>
