@@ -1,7 +1,7 @@
 import Link from "next/link"
-import { signIn, signOut, session } from "next-auth/react"
+import { signIn, signOut } from "next-auth/react"
 import styles from "./header.module.css"
-
+import { Session } from "next-auth";
 // The approach used in this component shows how to build a sign in and sign out
 // component that works on pages which support both client and server side
 // rendering, and avoids any flash incorrect content on initial page load.
