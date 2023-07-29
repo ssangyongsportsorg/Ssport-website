@@ -26,7 +26,7 @@ return (
   <div className="flex md:order-2">
     <Button>
      {!session && (
-            <Link>
+            <Link
               href={`/api/auth/signin`}
                 className={styles.buttonPrimary}
                 onClick={(e) => {
