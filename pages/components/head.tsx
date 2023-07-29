@@ -99,4 +99,3 @@ return (
   )
 }
 
-export default head;   
