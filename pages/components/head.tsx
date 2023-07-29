@@ -40,7 +40,7 @@ export default function NavBar({ session }: { session: Session | null }) {
     </Button>
     </>
    )}
-   {session?.user && (
+   {session?.null && (
   <>
     <a
                 href={`/api/auth/signout`}
