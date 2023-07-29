@@ -26,7 +26,8 @@ return (
     </span>
   </Link>
   <div className="flex md:order-2">
-    <Button>
+    <>
+
 {!session && (
     <button
         className={styles.buttonPrimary}
@@ -48,7 +49,9 @@ return (
         }}
     >
         登出
-</Button>
+    </button>
+)}
+</>
     <Navbar.Toggle />
   </div>
   <Navbar.Collapse>
