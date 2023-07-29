@@ -25,34 +25,31 @@ return (
   </Link>
   <div className="flex md:order-2">
     <Button>
-     {!session && (
-            <Link
-              href={`/api/auth/signin`}
-                className={styles.buttonPrimary}
-                onClick={(e) => {
-                  e.preventDefault()
-                  signIn()
-                }}
-              >
-                登入
-              </Link>
-            </>
-          )}
-          {session?.user && (
-            <>
-               <Link
-                href={`/api/auth/signout`}
-                className={styles.button}
-                onClick={(e) => {
-                  e.preventDefault()
-                  signOut()
-                }}
-              >
-                登出
-              </Link>
-            </>
-          )}
-    </Button>
+  {!session && (
+    <Link
+      href={`/api/auth/signin`}
+      className={styles.buttonPrimary}
+      onClick={(e) => {
+        e.preventDefault()
+        signIn()
+      }}
+    >
+      登入
+    </Link>
+  )}
+  {session?.user && (
+    <Link
+      href={`/api/auth/signout`}
+      className={styles.button}
+      onClick={(e) => {
+        e.preventDefault()
+        signOut()
+      }}
+    >
+      登出
+    </Link>
+  )}
+</Button>
     <Navbar.Toggle />
   </div>
   <Navbar.Collapse>
