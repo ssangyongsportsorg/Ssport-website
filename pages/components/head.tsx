@@ -38,7 +38,6 @@ export default function NavBar({ session }: { session: Session | null }) {
               </a>
     </Button>
     </>
-   )}
    {session ? (
   <>
     <a
