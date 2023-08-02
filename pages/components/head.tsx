@@ -73,3 +73,25 @@ export default function Header() {
 
   )
 }
+export async function getStaticProps() {
+  const files = fs.readdirSync('posts');
+  const posts = files.map((fileName) => {
+    const slug = fileName.replace('.md', '');
+    const readFile = fs.readFileSync(`posts/${fileName}`, 'utf-8');
+    const { data: frontmatter } = matter(readFile);
+
+    return {
+      slug,
+      frontmatter,
+    };
+  });
+
+  // Sort posts in descending order based on the date property
+  posts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
+
+  return {
+    props: {
+      posts,
+    },
+  };
+
