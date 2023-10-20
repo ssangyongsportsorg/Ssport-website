@@ -1,5 +1,11 @@
-const nextConfig = {
-  reactStrictMode: true,
+/** @type {import('next').NextConfig} */
+const config = {
+  reactStrictMode: true
+}
+
+const { withContentlayer } = require('next-contentlayer')
+
+
   async redirects() {
     return [
       {
