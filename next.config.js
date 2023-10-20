@@ -5,4 +5,6 @@ const config = {
 
 const { withContentlayer } = require('next-contentlayer')
 
-module.exports = withContentlayer(config)
+module.exports = withAnalyzer(withContentlayer(config))const { withContentlayer } = require('next-contentlayer')
+
+module.exports = withAnalyzer(withContentlayer(config))
