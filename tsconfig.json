@@ -14,10 +14,15 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
- "paths": {
+  "paths": {
       "@/*": ["./*"],
       "contentlayer/generated": ["./.contentlayer/generated"]
     },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
