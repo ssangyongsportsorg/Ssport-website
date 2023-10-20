@@ -1,18 +1,11 @@
-import { RootProvider } from "next-docs-ui/provider";
-import { Inter } from "next/font/google";
+import { DocsLayout } from "next-docs-ui/layout";
 import type { ReactNode } from "react";
-import "next-docs-ui/style.css";
+import { tree } from "../source";
 
-const inter = Inter({
-  subsets: ["latin"],
-});
-
-export default function Layout({ children }: { children: ReactNode }) {
+export default function RootDocsLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={inter.className}>
-      <body>
-        <RootProvider>{children}</RootProvider>
-      </body>
-    </html>
+    <DocsLayout tree={tree} nav={{ title: "My App" }}>
+      {children}
+    </DocsLayout>
   );
 }
