@@ -1,8 +1,10 @@
+const { withContentlayer } = require("next-contentlayer");
+
 /** @type {import('next').NextConfig} */
-const config = {
-  reactStrictMode: true
-}
+const nextConfig = {
+  experimental: {
+    appDir: true,
+  },
+};
 
-const { withContentlayer } = require('next-contentlayer')
-
-module.exports = withAnalyzer(withContentlayer(config))
+module.exports = withContentlayer(nextConfig);
