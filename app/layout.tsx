@@ -6,15 +6,15 @@ import Footer from './components/footer'
 import { SessionProvider } from 'next-auth/react'
 import Script from 'next/script';
 export default function RootLayout({
-  Component, 
-  pageProps: { session, ...pageProps },
-}: AppProps) {
   // Layouts must accept a children prop.
   // This will be populated with nested layouts or pages
   children,
 }: {
   children: React.ReactNode
 }) {
+  Component, 
+  pageProps: { session, ...pageProps },
+}: AppProps) {
   return (
     <html lang="zh-tw">
       <SessionProvider session={session}>
