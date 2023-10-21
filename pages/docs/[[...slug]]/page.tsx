@@ -19,7 +19,7 @@ export default async function Page({
   }
 
   const toc = await getTableOfContents(page.body.raw)
-  const neighbour = findNeighbour(tree, getPageUrl(params.slug))
+  const neighbour = findNeighbour(getTree, getPageUrl(params.slug))
 
   return (
     <DocsPage toc={toc} footer={neighbour}>
