@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import styles from './components/Button.module.css';
+import styles from '../components/Button.module.css';
 function teamchoose() {
 
   return (   
