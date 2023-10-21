@@ -1,10 +1,8 @@
 'use client'
 import { Navbar } from "flowbite-react";
-import Login from "./login";
+
 import React from 'react';
 import Link from 'next/link';
-import { signIn, signOut, useSession } from "next-auth/react"
-import { Session } from "next-auth"
 export default function Header() {
   return (
     <>
@@ -25,7 +23,7 @@ export default function Header() {
     </span>
   </Link>
   <div className="flex md:order-2">
-    <Login />
+    
         
     
     <Navbar.Toggle />
