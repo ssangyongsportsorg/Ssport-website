@@ -1,6 +1,4 @@
-import Tvhero from './components/Tvhero';
-import Price from './components/price';
-import Feature from './components/feature';
+
 import React from 'react';
 import Head from 'next/head'
 const t = () => {
