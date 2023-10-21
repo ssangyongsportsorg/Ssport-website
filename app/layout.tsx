@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   Component,
-  pageProps: { session, ...pageProps },
+  pageProps: { session, ...pageProps }
 }: AppProps<{ session: Session }>) {
   return (
     <html lang="zh-tw">
