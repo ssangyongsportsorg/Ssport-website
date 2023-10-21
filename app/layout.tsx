@@ -1,4 +1,5 @@
 import '@/styles/globals.css'
+import { Metadata } from 'next'
 import type { AppProps } from 'next/app'
 import Head from './components/head'
 import Footer from './components/footer'
