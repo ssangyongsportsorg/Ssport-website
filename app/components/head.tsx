@@ -1,3 +1,4 @@
+'use client'
 import { Navbar } from "flowbite-react";
 import Login from "./login";
 import React from 'react';
