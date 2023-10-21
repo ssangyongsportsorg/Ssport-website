@@ -1,7 +1,27 @@
 import { allDocs, allMeta } from 'contentlayer/generated'
-import { createContentlayer } from 'next-docs-zeta/contentlayer'
+import {
+  buildPageTree,
+  createUtils,
+  loadContext
+} from 'next-docs-zeta/contentlayer'
+import type { PageTree } from 'next-docs-zeta/server'
 
-export const { tree, getPage, getPageUrl } = createContentlayer(
-  allMeta,
-  allDocs
-)
+const ctx = loadContext(allMeta, allDocs)
+
+const uiTree = buildPageTree(ctx, {
+  root: 'docs/ui'
+})
+
+const headlessTree = buildPageTree(ctx, {
+  root: 'docs/headless'
+})
+
+export function getTree(mode: 'ui' | 'headless' | string): PageTree {
+  if (mode === 'ui') {
+    return uiTree
+  }
+
+  return headlessTree
+}
+
+export const { getPage, getPageUrl } = createUtils(ctx)
