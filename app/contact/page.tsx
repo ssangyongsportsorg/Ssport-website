@@ -1,3 +1,4 @@
+'use client'
 import Head from 'next/head'
 import styles from '../components/Button.module.css';
 import { Label, Select } from 'flowbite-react';
