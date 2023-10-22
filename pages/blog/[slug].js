@@ -4,7 +4,7 @@ import matter from "gray-matter";
 import MarkdownIt from "markdown-it"; // import the markdown-it library
 import md from "markdown-it"; // import the markdown-it library
 import path from "path";
-import styles from '../components/Style.module.css';
+import styles from '../components/style.module.css';
 import Head from 'next/head'
 // The page for each post
 export default function Post({frontmatter, content}) {
