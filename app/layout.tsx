@@ -19,6 +19,7 @@ export default function RootLayout({
         <div>
   <Script src="/chat.js" />
         <Head />
+          <br /><br />
       <body>{children}</body>
           <Footer />
         </div>
