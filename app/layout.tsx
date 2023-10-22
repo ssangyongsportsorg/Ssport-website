@@ -1,7 +1,6 @@
 import '@/styles/globals.css'
-import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
-import Head from './components/head'
+import Head from '../pages/components/head'
 import Footer from './components/footer'
 import { SessionProvider } from 'next-auth/react'
 import Script from 'next/script';
@@ -15,13 +14,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="zh-tw">
-      
+      </Head>
         <div>
   <Script src="/chat.js" />
-        <Head />
+        
           <br /><br />
       <body>{children}</body>
           <Footer />
+          
         </div>
   
     </html>
