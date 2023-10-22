@@ -1,6 +1,6 @@
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
-import Head from '../pages/components/head'
+import Head from './pages/components/head'
 import Footer from './components/footer'
 import { SessionProvider } from 'next-auth/react'
 import Script from 'next/script';
