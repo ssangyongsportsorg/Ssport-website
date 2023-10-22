@@ -1,8 +1,6 @@
 import { Navbar } from "flowbite-react";
 import React from 'react';
 import Link from 'next/link';
-import { signIn, signOut, useSession } from "next-auth/react"
-import { Session } from "next-auth"
 export default function Header() {
   return (
     <>
