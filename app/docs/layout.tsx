@@ -4,8 +4,8 @@ import { tree } from '../source'
 import 'next-docs-ui/style.css'
 export default function RootDocsLayout({ children }: { children: ReactNode }) {
   return (
-    <DocsLayout tree={tree} nav={{ title: 'My App' }}>
+    <div>
       {children}
-    </DocsLayout>
+    </div>
   )
 }
