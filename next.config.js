@@ -1,14 +1,10 @@
+const { withContentlayer } = require("next-contentlayer");
+
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  async redirects() {
-    return [
-      {
-        source: '/c',
-        destination: '/contact',
-        permanent: true,
-      },
-    ];
+  experimental: {
+    appDir: true,
   },
 };
 
-module.exports = nextConfig;
+module.exports = withContentlayer(nextConfig);
