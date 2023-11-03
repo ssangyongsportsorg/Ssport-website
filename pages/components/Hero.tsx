@@ -1,6 +1,8 @@
  import Link from 'next/link';
 import styles from './Button.module.css';
 import a from './a.module.css';
+import { ThemedButton } from "react-native-really-awesome-button";
+
 function hero() {
   return (
  <section className="bg-gradient-to-br from-indigo-50 via-white to-indigo-700">
@@ -39,6 +41,8 @@ function hero() {
      體育組織
     </h2>
     <div className="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+             <ThemedButton name="bruce" type="anchor" style={styles.button}>Anchor</ThemedButton>
+
       <Link
   href="#anchor_one"
   className="{a.fade-in-button} inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900 animate-fade-in"
