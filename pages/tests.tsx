@@ -1,7 +1,7 @@
 import { useSession } from "next-auth/react"
 
 function ContactForm() {
-  const [session, loading] = useSession();
+  const { data: session, update } = useSession()
 
   // 聯繫表單提交處理邏輯
   const handleSubmit = (e) => {
