@@ -11,7 +11,7 @@
   "dependencies": {
     "@docsearch/react": "^3.5.2",
     "contentlayer": "^0.3.4",
-    "flowbite": "^2.2.0",
+    "flowbite": "^1.8.1",
     "flowbite-react": "^0.7.0",
     "gray-matter": "^4.0.3",
     "markdown-it": "^13.0.2",
