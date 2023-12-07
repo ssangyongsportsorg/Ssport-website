@@ -15,6 +15,9 @@ export default function Post({frontmatter, content}) {
     const {title, seo, author, category, date, bannerImage, tags, img, info} = frontmatter
 
     return 
+     
+
+  <main className="pt-8 pb-16 lg:pt-16 lg:pb-24 ">
          <section
   className="bg-gradient-to-br from-indigo-50 via-white to-cyan-100"
 >
@@ -28,9 +31,6 @@ export default function Post({frontmatter, content}) {
           </div>    
   </div>
 </section>
-
-  <main className="pt-8 pb-16 lg:pt-16 lg:pb-24 ">
-     
   <div className="flex justify-between px-4 mx-auto max-w-screen-xl ">
     <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
 
