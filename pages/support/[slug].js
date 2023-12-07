@@ -7,7 +7,7 @@ import path from "path";
 import styles from '../components/Button.module.css';
 import Head from 'next/head'
 import { DocSearch } from '@docsearch/react'
-import a from './docsearch.module.css';
+import a from '../components/docsearch.module.css';
 import '@docsearch/css';
 
 // The page for each post
