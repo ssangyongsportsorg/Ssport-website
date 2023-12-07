@@ -11,7 +11,7 @@ import a from '../components/docsearch.module.css';
 import '@docsearch/css';
 
 // The page for each post
-export default function Post({frontmatter, content}) {
+export default function Support({frontmatter, content}) {
     const {title, seo, author, category, date, bannerImage, tags, img, info} = frontmatter
 
     return 
@@ -101,7 +101,7 @@ export default function Post({frontmatter, content}) {
 // Generating the paths for each post
 export async function getStaticPaths() {
   // Get list of all files from our posts directory
-  const files = fs.readdirSync("posts");
+  const files = fs.readdirSync("support");
   // Generate a path for each one
   const paths = files.map((fileName) => ({
     params: {
