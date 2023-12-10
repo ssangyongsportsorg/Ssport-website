@@ -1,4 +1,4 @@
-import { ImageUrl } from "../utils";
+import { ImageUrl } from "../../utils";
 
 export default function ItemPost({ post: {post } }) {
    
