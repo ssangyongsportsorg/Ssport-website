@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import Link from 'next/link'
-import ItemPost from '../components/post'
+import ItemPost from '../components/ItemPost'
 import { slugify, ImageUrl } from '../../utils'
 
 
