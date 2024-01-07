@@ -18,7 +18,7 @@
     "@types/react-dom": "18.0.11",
     "contentlayer": "^0.3.4",
     "crisp-sdk-web": "^1.0.21",
-    "eslint": "8.36.0",
+    "eslint": "8.56.0",
     "eslint-config-next": "13.2.4",
     "flowbite": "^1.6.4",
     "flowbite-react": "^0.4.2",
