@@ -4,7 +4,7 @@ import { Button } from "flowbite-react";
 import { Dropdown, Avatar } from 'flowbite-react';
 import Link from 'next/link';
 import { LoginLink, LogoutLink, RegisterLink, getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
-
+import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 export default function Login() {
   const Navbar = () => {
     const { getUser } = getKindeServerSession();
