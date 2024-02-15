@@ -15,7 +15,7 @@ export default function Login() {
   const user = getUser();
 
   return (
-    <>
+  
 <>
   <nav className="nav container">
     <h1 className="text-display-3">KindeAuth</h1>
