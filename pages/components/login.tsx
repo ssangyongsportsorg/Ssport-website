@@ -12,7 +12,7 @@ import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 
 export default function Login() {
     const { isAuthenticated, getUser } = getKindeServerSession();
-  const user = await getUser();
+  const user = getUser();
 
   return (
     <>
