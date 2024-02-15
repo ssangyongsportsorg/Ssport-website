@@ -16,34 +16,31 @@ export default function Login() {
 
   return (
     <>
-      <nav className="nav container">
-        <h1 className="text-display-3">KindeAuth</h1>
-        <div>
-          {!isAuthenticated() ? (
-            <>
-              <LoginLink className="btn btn-ghost sign-in-btn">
-                Sign in
-              </LoginLink>
-              <RegisterLink className="btn btn-dark">Sign up</RegisterLink>
-            </>
-          ) : (
-            <div className="profile-blob">
-
-                <div className="avatar">
-                  {user?.given_name?.[0]}
-                  {user?.family_name?.[0]}
-                </div>
-              )}
-              <div>
-                <p className="text-heading-2">
-                  {user?.given_name} {user?.family_name}
-                </p>
-                <LogoutLink className="text-subtle">Log out</LogoutLink>
-              </div>
-            </div>
-          )}
+<>
+  <nav className="nav container">
+    <h1 className="text-display-3">KindeAuth</h1>
+    <div>
+      {!isAuthenticated() ? (
+        <>
+          <LoginLink className="btn btn-ghost sign-in-btn">Sign in</LoginLink>
+          <RegisterLink className="btn btn-dark">Sign up</RegisterLink>
+        </>
+      ) : (
+        <div className="profile-blob">
+          <div className="avatar">
+            {user?.given_name?.[0]}
+            {user?.family_name?.[0]}
+          </div>
+          <div>
+            <p className="text-heading-2">
+              {user?.given_name} {user?.family_name}
+            </p>
+            <LogoutLink className="text-subtle">Log out</LogoutLink>
+          </div>
         </div>
-      </nav>
-    </>
+      )}
+    </div>
+  </nav>
+</>
   );
 }
