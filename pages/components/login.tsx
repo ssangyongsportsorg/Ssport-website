@@ -28,14 +28,7 @@ export default function Login() {
             </>
           ) : (
             <div className="profile-blob">
-              {user?.picture ? (
-                <img
-                  className="avatar"
-                  src={user?.picture}
-                  alt="user profile avatar"
-                  referrerPolicy="no-referrer"
-                />
-              ) : (
+
                 <div className="avatar">
                   {user?.given_name?.[0]}
                   {user?.family_name?.[0]}
