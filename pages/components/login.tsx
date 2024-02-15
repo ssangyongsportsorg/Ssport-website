@@ -17,37 +17,43 @@ export default function Login() {
 
     return (
       <>
-        {user?.picture ? (
-          <Dropdown inline label={<Avatar alt="User settings" img={`${user?.picture}`} rounded />} >
-            <Dropdown.Header>
-              <span className="block text-sm">${user.family_name}</span>
-              <span className="block truncate text-sm font-medium">{user.email}</span>
-            </Dropdown.Header>
-            <div> <Link href="/watch-tv">觀看TV</Link></div> 
-            <div> <Link href="#">購物</Link> </div> 
-            <div> <Link href="/support">幫助</Link> </div> 
-            <Dropdown.Divider />
+                <nav className="nav container">
+            <h1 className="text-display-3">KindeAuth</h1>
             <div>
-              <LogoutLink className="text-subtle">登出</LogoutLink>
+              {!(await isAuthenticated()) ? (
+                <>
+                  <LoginLink className="btn btn-ghost sign-in-btn">
+                    Sign in
+                  </LoginLink>
+                  <RegisterLink className="btn btn-dark">Sign up</RegisterLink>
+                </>
+              ) : (
+                <div className="profile-blob">
+                  {user?.picture ? (
+                    <img
+                      className="avatar"
+                      src={user?.picture}
+                      alt="user profile avatar"
+                      referrerPolicy="no-referrer"
+                    />
+                  ) : (
+                    <div className="avatar">
+                      {user?.given_name?.[0]}
+                      {user?.family_name?.[0]}
+                    </div>
+                  )}
+                  <div>
+                    <p className="text-heading-2">
+                      {user?.given_name} {user?.family_name}
+                    </p>
+
+                    <LogoutLink className="text-subtle">Log out</LogoutLink>
+                  </div>
+                </div>
+              )}
             </div>
-          </Dropdown>
-        ) : (
-          <div>
-            {user?.given_name?.[0]}
-            {user?.email?.[0]}
-          </div>
-        )}
-      </>
+          </nav>
+      <>
     );
   };
 
-  return (
-    <>
-      <button className="break-keep rounded-md px-5 py-1 font-bold">
-        <RegisterLink className={buttonVariants({ variant: 'ghost', size: 'sm' })}>
-          註冊
-        </RegisterLink>
-      </button>
-    </>
-  );
-}
