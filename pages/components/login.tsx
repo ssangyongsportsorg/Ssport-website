@@ -18,8 +18,12 @@ return (
    {user?.picture ? (
 <Dropdown inline label={<Avatar alt="User settings" img={`${user?.picture}`} rounded/>} > 
      ) : (
+  <div>
    {user?.given_name?.[0]}
        {user?.email?.[0]}
+  
+  <div/>
+     )}
   <Dropdown.Header> <span className="block text-sm">${user.family_name}  </span> <span className="block truncate text-sm font-medium"> {user.email} </span> </Dropdown.Header> 
   <div> <Link href="/watch-tv">觀看TV</Link></div> <div> <Link href="#">購物</Link> </div> <div> <Link href="/support">幫助</Link> </div> <Dropdown.Divider /> <div>  )}
  <LogoutLink className="text-subtle">登出</LogoutLink> </div> </Dropdown>
