@@ -1,40 +1,46 @@
 'use client';
-import { signIn, signOut, useSession } from "next-auth/react"
 import React from 'react';
 import { Button } from "flowbite-react";
-import { Dropdown, Navbar, Avatar } from 'flowbite-react';
-import Link from 'next/link'
+import { Dropdown, Avatar } from 'flowbite-react';
+import Link from 'next/link';
+import {
+  RegisterLink,
+  LoginLink,
+  LogoutLink,
+} from "@kinde-oss/kinde-auth-nextjs/components";
+import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+
 export default function Login() {
-const { data: session, status } = useSession();
-if (session) {
-return (
+    const { isAuthenticated, getUser } = getKindeServerSession();
+  const user = getUser();
+
+  return (
+  
 <>
-<Dropdown inline label={<Avatar alt="User settings" img={`${session?.user.image}`} rounded/>} > <Dropdown.Header> <span className="block text-sm"> {session.user.name}  </span> <span className="block truncate text-sm font-medium"> {session.user.email} </span> </Dropdown.Header> <div> <Link href="/watch-tv">觀看TV</Link></div> <div> <Link href="#">購物</Link> </div> <div> <Link href="/support">幫助</Link> </div> <Dropdown.Divider /> <div>
-  <Link href={`/api/auth/signout`} 
-                 onClick={(e) => { 
-                   e.preventDefault() 
-                   signOut() 
-                 }} 
-               > 
-                 登出
-               </Link> </div> </Dropdown>
+  <nav className="nav container">
+    <h1 className="text-display-3">KindeAuth</h1>
+    <div>
+      {!isAuthenticated() ? (
+        <>
+          <LoginLink className="btn btn-ghost sign-in-btn">Sign in</LoginLink>
+          <RegisterLink className="btn btn-dark">Sign up</RegisterLink>
+        </>
+      ) : (
+        <div className="profile-blob">
+          <div className="avatar">
+            {user?.given_name?.[0]}
+            {user?.family_name?.[0]}
+          </div>
+          <div>
+            <p className="text-heading-2">
+              {user?.given_name} {user?.family_name}
+            </p>
+            <LogoutLink className="text-subtle">Log out</LogoutLink>
+          </div>
+        </div>
+      )}
+    </div>
+  </nav>
 </>
-)
-}
-return (
-<>
-<button
-        className="break-keep rounded-md px-5 py-1 font-bold"
-      >
-  <Link
-                 href={`/api/auth/signin`} 
-                 onClick={(e) => { 
-                   e.preventDefault() 
-                   signIn() 
-                 }} 
-               > 
-                 登入
-               </Link></button>
-</>
-)
+  );
 }
