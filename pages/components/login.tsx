@@ -1,23 +1,28 @@
 'use client';
-import { signIn, signOut, useSession } from "next-auth/react"
+import {
+  LoginLink,
+  LogoutLink,
+  RegisterLink,
+  getKindeServerSession,
+} from '@kinde-oss/kinde-auth-nextjs/server'
 import React from 'react';
 import { Button } from "flowbite-react";
 import { Dropdown, Navbar, Avatar } from 'flowbite-react';
 import Link from 'next/link'
 export default function Login() {
-const { data: session, status } = useSession();
-if (session) {
+const Navbar = () => {
+  const { getUser } = getKindeServerSession()
+  const user = getUser()
 return (
 <>
-<Dropdown inline label={<Avatar alt="User settings" img={`${session?.user.image}`} rounded/>} > <Dropdown.Header> <span className="block text-sm"> {session.user.name}  </span> <span className="block truncate text-sm font-medium"> {session.user.email} </span> </Dropdown.Header> <div> <Link href="/watch-tv">觀看TV</Link></div> <div> <Link href="#">購物</Link> </div> <div> <Link href="/support">幫助</Link> </div> <Dropdown.Divider /> <div>
-  <Link href={`/api/auth/signout`} 
-                 onClick={(e) => { 
-                   e.preventDefault() 
-                   signOut() 
-                 }} 
-               > 
-                 登出
-               </Link> </div> </Dropdown>
+   {user?.picture ? (
+<Dropdown inline label={<Avatar alt="User settings" img={`${user?.picture}`} rounded/>} > 
+     ) : (
+   {user?.given_name?.[0]}
+       {user?.email?.[0]}
+  <Dropdown.Header> <span className="block text-sm">${user.family_name}  </span> <span className="block truncate text-sm font-medium"> {user.email} </span> </Dropdown.Header> 
+  <div> <Link href="/watch-tv">觀看TV</Link></div> <div> <Link href="#">購物</Link> </div> <div> <Link href="/support">幫助</Link> </div> <Dropdown.Divider /> <div>  )}
+ <LogoutLink className="text-subtle">登出</LogoutLink> </div> </Dropdown>
 </>
 )
 }
@@ -26,15 +31,13 @@ return (
 <button
         className="break-keep rounded-md px-5 py-1 font-bold"
       >
-  <Link
-                 href={`/api/auth/signin`} 
-                 onClick={(e) => { 
-                   e.preventDefault() 
-                   signIn() 
-                 }} 
-               > 
-                 登入
-               </Link></button>
+ <RegisterLink
+                  className={buttonVariants({
+                    variant: 'ghost',
+                    size: 'sm',
+                  })}>
+                 註冊
+                </RegisterLink></button>
 </>
 )
 }
