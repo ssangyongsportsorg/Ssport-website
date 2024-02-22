@@ -21,7 +21,7 @@
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
     "flowbite": "^1.6.4",
-    "flowbite-react": "^0.4.2",
+    "flowbite-react": "^0.7.0",
     "framer-motion": "^10.16.16",
     "gray-matter": "^4.0.3",
     "markdown-it": "^13.0.1",
