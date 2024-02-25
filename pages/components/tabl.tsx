@@ -35,7 +35,7 @@ function Tabl() {
         </div>
         <Image
           className="w-full"
-          src="/sba.png"
+          src="/undraw_basketball_re_7701.svg"
           alt="dashboard image"
         />
       </div>
