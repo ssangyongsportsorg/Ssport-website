@@ -15,7 +15,7 @@
     "@types/mdx": "^2.0.10",
     "@types/node": "18.15.10",
     "@types/react": "18.0.29",
-    "@types/react-dom": "18.0.11",
+    "@types/react-dom": "18.2.22",
     "contentlayer": "^0.3.4",
     "crisp-sdk-web": "^1.0.21",
     "eslint": "8.36.0",
