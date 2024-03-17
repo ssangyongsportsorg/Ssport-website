@@ -1,8 +1,8 @@
 import GradientWrapper from "../GradientWrapper"
 import Image from "next/image"
-import NavLink from "../NavLink"
+import Link from "../NavLink"
 import bgPattern from "@/public/images/bg-pattern.webp"
-import LayoutEffect from "../componets/LayoutEffect"
+import LayoutEffect from "../LayoutEffect"
 
 const CTA = () => (
     <section>
@@ -25,7 +25,7 @@ const CTA = () => (
                             </p>
                         </div>
                         <div className="mt-5 flex justify-center font-medium text-sm">
-                            <NavLink
+                            <Link
                                 href="/#pricing"
                                 className="flex items-center text-white bg-purple-600 hover:bg-purple-500 active:bg-purple-700 "
                             >
@@ -33,7 +33,7 @@ const CTA = () => (
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
                                     <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
                                 </svg>
-                            </NavLink>
+                            </Link>
                         </div>
                     </div>
                 </LayoutEffect>
