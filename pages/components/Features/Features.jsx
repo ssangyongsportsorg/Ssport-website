@@ -1,5 +1,5 @@
-import LayoutEffect from "@/components/LayoutEffect"
-import SectionWrapper from "@/components/SectionWrapper"
+import LayoutEffect from "../LayoutEffect"
+import SectionWrapper from "../SectionWrapper"
 
 const Features = () => {
 
