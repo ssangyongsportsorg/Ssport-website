@@ -4,7 +4,7 @@ import Features from "./components/Features";
 import Hero from "./components/Hero";
 import Pricing from "./components/Pricing";
 import VisualFeatures from "./components/VisualFeatures";
-
+import Head from 'next/head'
 export default function TV() {
   return (
     <>
