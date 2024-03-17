@@ -1,9 +1,8 @@
 import CTA from "./components/CTA";
-import FAQs from "./components/ui/FAQs";
+import FAQs from "./components/FAQs";
 import Features from "./components/Features";
 import Hero from "./components/Hero";
 import Pricing from "./components/Pricing";
-import Testimonial from "./components/Testimonial";
 import VisualFeatures from "./components/VisualFeatures";
 
 export default function TV() {
@@ -13,7 +12,6 @@ export default function TV() {
       <VisualFeatures />
       <Features />
       <CTA />
-      <Testimonial />
       <Pricing />
       <FAQs />
       <Head>
