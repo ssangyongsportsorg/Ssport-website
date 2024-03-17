@@ -1,8 +1,8 @@
-import GradientWrapper from "@/components/GradientWrapper"
+import GradientWrapper from "../GradientWrapper"
 import Image from "next/image"
 import NavLink from "../NavLink"
 import bgPattern from "@/public/images/bg-pattern.webp"
-import LayoutEffect from "@/components/LayoutEffect"
+import LayoutEffect from "../LayoutEffect"
 
 const CTA = () => (
     <section>
