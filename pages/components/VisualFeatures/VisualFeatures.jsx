@@ -25,8 +25,7 @@ const VisualFeatures = () => {
                         Take your email marketing to the next level with Mailgo
                     </h2>
                     <p className="mt-3">
-                        With Mailgo's powerful features, you can easily create and send beautiful emails that will engage your customers and drive more sales.
-                    </p>
+                        測試  </p>
                 </div>
                 <div className="mt-12">
                     <ul className="space-y-8 gap-x-6 sm:flex sm:space-y-0">
