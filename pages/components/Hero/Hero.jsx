@@ -1,7 +1,7 @@
 import GradientWrapper from "../GradientWrapper"
 import Image from "next/image"
 import Link from 'next/link'
-import HeroImg from "@/public/hero.svg"
+import HeroImg from "..../public/hero.svg"
 import LayoutEffect from "../LayoutEffect"
 
 const Hero = () => (
