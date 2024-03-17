@@ -2,7 +2,7 @@ import GradientWrapper from "../GradientWrapper"
 import Image from "next/image"
 import NavLink from "../NavLink"
 import bgPattern from "@/public/images/bg-pattern.webp"
-import LayoutEffect from "../LayoutEffect"
+import LayoutEffect from "../componets/LayoutEffect"
 
 const CTA = () => (
     <section>
