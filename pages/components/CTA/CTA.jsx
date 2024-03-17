@@ -1,6 +1,6 @@
 import GradientWrapper from "../GradientWrapper"
 import Image from "next/image"
-import Link from "../NavLink"
+import Link from 'next/link'
 import bgPattern from "@/public/images/bg-pattern.webp"
 import LayoutEffect from "../LayoutEffect"
 
