@@ -7,11 +7,7 @@ import LayoutEffect from "../LayoutEffect"
 const Hero = () => (
     <section>
         <div className="custom-screen py-28">
-            <LayoutEffect className="duration-1000 delay-300"
-                isInviewState={{
-                    trueState: "opacity-1",
-                    falseState: "opacity-0"
-                }}
+            <div
             >
                 <div>
                     <div className="space-y-5 max-w-3xl mx-auto text-center">
@@ -44,7 +40,7 @@ const Hero = () => (
                         />
                     </GradientWrapper>
                 </div>
-            </LayoutEffect>
+            </div>
         </div>
     </section>
 )
