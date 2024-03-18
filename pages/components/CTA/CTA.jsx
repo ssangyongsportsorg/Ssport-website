@@ -8,12 +8,7 @@ const CTA = () => (
     <section>
         <GradientWrapper wrapperClassName="max-w-xs h-[13rem] top-12 inset-0">
             <div className="custom-screen py-28 relative">
-                <LayoutEffect
-                    className="duration-1000 delay-300"
-                    isInviewState={{
-                        trueState: "opacity-1",
-                        falseState: "opacity-0 translate-y-6"
-                    }}
+                <div
                 >
                     <div className="relative z-10">
                         <div className="max-w-xl mx-auto text-center">
@@ -36,7 +31,7 @@ const CTA = () => (
                             </Link>
                         </div>
                     </div>
-                </LayoutEffect>
+                </div>
                 <Image
                     src={bgPattern}
                     className="w-full h-full object-cover m-auto absolute inset-0 pointer-events-none"
