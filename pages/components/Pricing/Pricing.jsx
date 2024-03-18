@@ -59,12 +59,7 @@ const Pricing = () => {
                     Find a plan to power your business
                 </h2>
             </div>
-            <LayoutEffect
-                className="duration-1000 delay-300"
-                isInviewState={{
-                    trueState: "opacity-1",
-                    falseState: "opacity-0"
-                }}
+            <div
             >
                 <div className='mt-16 justify-center gap-6 sm:grid sm:grid-cols-2 sm:space-y-0 lg:grid-cols-3'>
                     {
@@ -115,7 +110,7 @@ const Pricing = () => {
                         ))
                     }
                 </div>
-            </LayoutEffect>
+            </div>
         </SectionWrapper>
     );
 };
