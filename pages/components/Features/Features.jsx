@@ -57,12 +57,7 @@ const Features = () => {
     return (
         <SectionWrapper>
             <div id="features" className="custom-screen text-gray-300">
-                <LayoutEffect
-                    className="duration-1000 delay-300"
-                    isInviewState={{
-                        trueState: "opacity-1",
-                        falseState: "opacity-0 translate-y-6"
-                    }}
+                <div
                 >
                     <div className="max-w-xl mx-auto text-center">
                         <h2 className="text-gray-50 text-3xl font-semibold sm:text-4xl">
@@ -72,13 +67,8 @@ const Features = () => {
                             Mailgo makes it easy for you to create beautiful emails that get noticed and opened, track results, and build relationships with your customers.
                         </p>
                     </div>
-                </LayoutEffect>
-                <LayoutEffect
-                    className="duration-1000 delay-500"
-                    isInviewState={{
-                        trueState: "opacity-1",
-                        falseState: "opacity-0"
-                    }}
+                </div>
+                <div
                 >
                     <div className="relative mt-12">
                         <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -103,7 +93,7 @@ const Features = () => {
                             }
                         </ul>
                     </div>
-                </LayoutEffect>
+                </div>
             </div>
         </SectionWrapper>
     )
