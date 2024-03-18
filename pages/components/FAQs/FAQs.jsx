@@ -40,12 +40,7 @@ const FAQs = () => (
                 </p>
             </div>
             <div className='mt-12'>
-                <LayoutEffect
-                    className="duration-1000 delay-300"
-                    isInviewState={{
-                        trueState: "opacity-1",
-                        falseState: "opacity-0 translate-y-12"
-                    }}
+                <div
                 >
                     <ul className='space-y-8 gap-12 grid-cols-2 sm:grid sm:space-y-0 lg:grid-cols-3'>
                         {faqsList.map((item, idx) => (
@@ -64,7 +59,7 @@ const FAQs = () => (
                             </li>
                         ))}
                     </ul>
-                </LayoutEffect>
+                </div>
             </div>
         </div>
     </SectionWrapper>
