@@ -13,7 +13,7 @@ export default function App({
   if (Component.name === 'support') {
     return (
       <div>
-        <div className="bg-gradient h-screen w-full bg-gradient-to-br from-indigo-50 via-white to-cyan-100" />
+        <div/>
         <Component {...pageProps} />
       </div>
     );
